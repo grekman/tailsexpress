@@ -33,6 +33,10 @@ a {
   overflow: scroll;
 }
 
+#content img {
+  height: 10vh;
+}
+
 
 #footer {
   background-image: url(../images/footer-bg.jpg);
