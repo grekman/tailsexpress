@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    #header
+      //- img(src="images/head.jpg")
+    
+    .middle  
+      #sidebar
+        ul
+          li
+            a(href='/tales') Сказки
+          li
+            a(href='/contacts') Контакты
+          li
+            a(href='/about') о проекте
+      
+      #content
+        block content
+
+      
+    #footer
+      ul
+        li
+          a(href='/tales') Сказки
+        li
+          a(href='/contacts') Контакты
+        li
+          a(href='/about') о проекте

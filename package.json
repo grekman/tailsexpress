@@ -1,0 +1,22 @@
+{
+  "name": "tailsexpress",
+  "version": "1.0.0",
+  "description": "fairy tails site on expressjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grekman/tailsexpress.git"
+  },
+  "author": "grekman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grekman/tailsexpress/issues"
+  },
+  "homepage": "https://github.com/grekman/tailsexpress#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
