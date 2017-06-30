@@ -1,8 +1,16 @@
 extends layout
 
 block content
-  h2 #{title}
-  p 
-    img(src= img)
-    #{text}
+  if !data
+    h2= title
+    p 
+      img(src= img)
+      #{text}
+  
+  else
+    each item in data
+      div
+        - var id = item.id
+        a(href="/tales/?id=" + id) #{item.title} #{item.id}
+   
   

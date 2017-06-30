@@ -7,16 +7,22 @@ router.get('/', function(req, res, next) {
 
   id = req.query.id;
 
-  if (id > 0 ) {
 
-    fs.readFile('/Users/grekman/StudyContinue/Day_0630/tailsexpress/tails/public/json/'+id+'.json','UTF-8', function( err,data){
+
+    fs.readFile('/Users/grekman/StudyContinue/Day_0630/tailsexpress/tails/public/json/total.json','UTF-8', function( err,data){
       data = JSON.parse(data);
-      res.render('tales', {title : data.title, img : data.img, text : data.text})
+
+      if(id) {
+        data.map(item => {
+
+          if(item.id == id) res.render('tales', {title : item.title, img : item.img, text : item.text});
+        })
+      } else {
+        res.render('tales', {data: data})
+      }
     })
 
-  } else{
-    res.render('tales')
-  }
+
 
 });
 
